@@ -12,22 +12,8 @@
   </head>
 
   <body>
-    <div class="top-bar">
-      <div class="container">
-        <a class="logo" href="/">Question</a>||
-        <a class="new" href="/questions/new">New</a>
-      </div>
-    </div>
-    <% if flash.any? %>
-      <div class="flash">
-        <div class="container">
-          <%= flash[:notice] %>
-        </div>
-      </div>
-    <% end %>
-    <div class="container">
-      <%= yield %>
-    </div>
+
+    <%= yield %>
     <%= javascript_include_tag "application" %>
   </body>
 </html>
