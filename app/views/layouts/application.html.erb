@@ -16,6 +16,17 @@
       <div class="container">
         <a class="logo" href="/">Question</a>||
         <a class="new" href="/questions/new">New</a>
+        <ul class="large-3 column right inline-list" style="margin-top: 10px">
+          <% if signed_in? %>
+            <li><span style="color: blue">Signed in as<span></li>
+            <li>
+              <img style="border-radius: 30px; width:35px; margin-top: -3px; postion: relative" src="<%= current_user.avatar_url %>">
+            </li>
+            <li><a href="/sign_out">Sign out</a></li>
+          <% else %>
+            <li><a href="/auth/facebook">Sign in</a></li>
+          <% end %>
+        </ul>
       </div>
     </div>
     <% if flash.any? %>

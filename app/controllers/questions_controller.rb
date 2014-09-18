@@ -38,9 +38,7 @@ class QuestionsController < ApplicationController
     else
       render 'edit'
     end
-
   end
-
 
 private
     def question_params
