@@ -29,4 +29,6 @@ gem 'spring',        group: :development
 gem 'pry-rails'
 gem 'redcarpet'
 gem 'foundation-rails'
+gem 'omniauth'
+gem 'omniauth-facebook', '1.4.0'
 

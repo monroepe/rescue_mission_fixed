@@ -1,6 +1,6 @@
 <h1><%= @question.title %></h1>
 
-<p><%= @question.description %></p>
+<p><%= markdown(@question.description) %></p>
 
 <%= link_to 'Edit', edit_question_path %>
 
@@ -14,10 +14,6 @@
     </li>
     <%end%>
   </ul>
-
-
-
-
 
 <h3>Submit Answer</h3>
 <%= form_for [@question, @answer], html: {class: "input_form"} do |f| %>
